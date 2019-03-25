@@ -2,12 +2,15 @@
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
+    {{message}}
   </h1>
   <app-test></app-test>
   <div class="app-test2">
 
   </div>
-  <div app-test3>
+  <!-- <div app-test3>
 
-  </div>
+  </div> -->
+  <app-test3 (childEvent)="message=$event" [parentData]="name"> </app-test3>
+  <app-list></app-list>
 </div>
