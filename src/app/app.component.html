@@ -4,14 +4,33 @@
     Welcome to {{ title }}!
     {{message}}
   </h1>
+  <!-- Mostrar el contenido de un component con etiqueta -->
   <app-test></app-test>
+  <!-- Mostrar el contenido de un component como si fuera una clase -->
   <div class="app-test2">
 
   </div>
-  <!-- <div app-test3>
+  <!-- Mostrar el contenido de un component como si fuera una propiedad -->
+   <div app-test3>
 
-  </div> -->
-  <app-test3 (childEvent)="message=$event" [parentData]="name"> </app-test3>
+  </div>
+  <!-- Comunicacion entre componente padre e hijo -->
+  <!-- Espera a que pase un evento en el hijo -->
+  <!-- Le manda la informacion en el nombre de esa variable -->
+   <app-test3 (childEvent)="message=$event" [parentData]="name"> </app-test3>
   <app-list></app-list>
   <app-list-detail></app-list-detail>
+
+<!-- Routing -->
+<h1>Routing and Navigation</h1>
+<nav>
+  <!-- El routerLink nos ayuda a ir la ruta que hemos declarado en el app-routing
+  El routerLinkActive pone la clase que le estemos mandando -->
+  <a routerLink="/list" routerLinkActive="active">List</a>
+  <a routerLink="/details" routerLinkActive="active">Details</a>
+</nav>
+<!-- El router Outlet ayuda a mostrar
+el contenido del html de la ruta que estamos utilizando -->
+<router-outlet></router-outlet>
+
 </div>

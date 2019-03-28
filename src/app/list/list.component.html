@@ -1,8 +1,10 @@
 
 <h1>Employee List</h1>
 
-<ul *ngFor="let e of employees">
-  <li> {{e.name}}</li>
+<ul>
+  <li *ngFor="let e of employees">
+    <button type="button" value="{{e.id}}">{{e.name}}</button>
+  </li>
 </ul>
 
 <h2>{{erroMsg}}</h2>
