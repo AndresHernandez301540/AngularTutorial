@@ -17,6 +17,8 @@ import {HttpClientModule} from '@angular/common/http';
 // Routing
 import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { Page404Component } from './page404/page404.component';
+import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
+import { EmployeeContactComponent } from './employee-contact/employee-contact.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { Page404Component } from './page404/page404.component';
     Test2Component,
     Test3Component,
     routingComponents,
-    Page404Component // Se agrega mejor un arreglo con las rutas que vayamos haciendo
+    Page404Component,
+    EmployeedetailsComponent,
+    EmployeeContactComponent // Se agrega mejor un arreglo con las rutas que vayamos haciendo
     // ListComponent,
     // ListDetailComponent
   ],

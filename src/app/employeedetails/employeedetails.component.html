@@ -1,0 +1,12 @@
+<a *ngIf="departmentId!=0" (click)="goPrevious()">Previous</a>
+<p>
+  
+  <button (click)="seeContact()" type="button" name="button">Contacto</button>
+  {{departmentId}}
+  <router-outlet></router-outlet>
+</p>
+<a *ngIf="departmentId!=3" (click)="goNext()">Next</a>
+
+<div>
+  <button (click)="goBack()" type="button" name="button">Back</button>
+</div>

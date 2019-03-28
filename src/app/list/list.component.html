@@ -3,7 +3,7 @@
 
 <ul>
   <li *ngFor="let e of employees">
-    <button type="button" value="{{e.id}}">{{e.name}}</button>
+    <button [class.selected]="isSelected(e)" (click)="onSelect(e)" type="button" value="{{e.id}}">{{e.name}}</button>
   </li>
 </ul>
 

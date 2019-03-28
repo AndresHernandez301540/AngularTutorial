@@ -12,11 +12,24 @@ import {ListDetailComponent} from './list-detail/list-detail.component';
 // El path ** siempre debe de ser el ultimo en los path
 // El '' es el home del proyecto
 import {Page404Component} from './page404/page404.component';
+
+
+//Route Parameters
+import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
+
+//Child routes
+import { EmployeeContactComponent } from './employee-contact/employee-contact.component';
+
 const routes:Routes=[
   // {path :'',component:ListDetailComponent},
   // {path:'',redirectTo:'/details',pathMatch:'prefix'},
   {path:'',redirectTo:'/details',pathMatch:'full'},
   {path:'list',component:ListComponent},
+  {path:'list/:id',
+  component:EmployeedetailsComponent,
+  children:[
+    {path:'contact',component:EmployeeContactComponent}
+  ]},
   {path:'details',component:ListDetailComponent},
   {path:'**',component:Page404Component}
 ];
@@ -30,4 +43,8 @@ const routes:Routes=[
   exports:[RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents=[ListComponent,ListDetailComponent];
+export const routingComponents=[
+  ListComponent,
+  ListDetailComponent,
+  Page404Component,
+  EmployeedetailsComponent];
